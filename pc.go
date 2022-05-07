@@ -7,8 +7,8 @@ import (
 	"time"
 )
 
-// buffer channel, bufferSize = 0 - blocking channel, bufferSize > 1 - buffered channel
-var bufferSize int = 0
+// bufferSize >= 1, to fulfill Dijkstra's problem description
+var bufferSize int = 1
 var buffer = make(chan int, bufferSize)
 var runforever = make(chan bool)
 
