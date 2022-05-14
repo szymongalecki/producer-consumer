@@ -31,8 +31,8 @@ func producer(id int) {
 
 func consumer(id int) {
 	for {
-		num := <-buffer
 		sleep()
+		num := <-buffer
 		fmt.Printf("Consumer%d: %d\n", id, num)
 	}
 }
